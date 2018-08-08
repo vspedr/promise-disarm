@@ -1,0 +1,33 @@
+{
+  "name": "promise-disarm",
+  "version": "0.1.0",
+  "description": "Utilities for making promises return errors instead of throwing them",
+  "main": "lib/index.js",
+  "repository": "https://github.com/vspedr/promise-disarm",
+  "author": "vspedr",
+  "license": "MIT",
+  "keywords": ["promise", "error", "handling"],
+  "private": false,
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^23.0.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-minify": "^0.4.0",
+    "eslint": "^5.0.1",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-import": "^2.8.0",
+    "jest": "^22.1.4",
+    "rimraf": "^2.6.2"
+  },
+  "scripts": {
+    "build": "rimraf lib && babel src/ --out-dir lib",
+    "lint": "eslint .",
+    "precommit": "yarn lint && yarn test",
+    "prepublish": "yarn test && yarn build",
+    "test": "jest"
+  },
+  "dependencies": {
+    "husky": "^0.14.3"
+  }
+}
