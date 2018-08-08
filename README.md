@@ -1,5 +1,6 @@
 # promise-disarm :bomb:
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/vspedr/promise-disarm.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/vspedr/promise-disarm.svg?branch=master)](https://travis-ci.org/vspedr/promise-disarm)
 
 Utilities for making promises return errors instead of throwing them... and just like disarming actual bombs THIS IS POTENTIALLY UNSAFE, BE WARNED. Make sure you actually handle the errors somehow.
