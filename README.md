@@ -1,5 +1,7 @@
 # promise-disarm :bomb:
 
+[![Build Status](https://travis-ci.org/vspedr/promise-disarm.svg?branch=master)](https://travis-ci.org/vspedr/promise-disarm)
+
 Utilities for making promises return errors instead of throwing them... and just like disarming actual bombs THIS IS POTENTIALLY UNSAFE, BE WARNED. Make sure you actually handle the errors somehow.
 
 If the provided promise does not reject, it will just resolve as usual.
