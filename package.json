@@ -1,6 +1,6 @@
 {
   "name": "promise-disarm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Utilities for making promises return errors instead of throwing them",
   "main": "lib/index.js",
   "repository": "https://github.com/vspedr/promise-disarm",
