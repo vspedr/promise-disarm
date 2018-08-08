@@ -11,6 +11,7 @@
     "error",
     "handling"
   ],
+  "files": ["lib/*"],
   "private": false,
   "devDependencies": {
     "babel-cli": "^6.26.0",
