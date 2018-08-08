@@ -5,3 +5,7 @@ export const disarm = (p) => {
     return new Promise((resolve) => resolve(p));
   }
 };
+
+export const disarmAll = (p) => {
+  return Promise.all(p.map((promise) => disarm(promise)));
+};

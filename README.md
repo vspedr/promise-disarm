@@ -10,15 +10,23 @@ If anything other than a promise is provided, it will return a promise that reso
 ### Usage example
 
 ```js
-import { disarm } from 'promise-disarm';
+import { disarm, disarmAll } from 'promise-disarm';
 
-// ...
 const promise = new Promise(_, reject) => reject(new Error())
-const result = disarm(promise).then(result => {
+
+// for a single promise...
+disarm(promise).then(result => {
   // a "cold" error, not thrown. Make sure you handle it.
   console.log(result instanceof Error); // true
 });
 
+// for an array of promises... just like Promise.all
+// except it does not fail after a single promise rejects
+// NOTE: this function itself may throw if argument is not an array
+disarmAll([promise, promise]).then(result => {
+  // an array of either values or errors
+  console.log(result.every(item => item instanceof Error));
+});
 ```
 
 ### Development scripts
