@@ -12,7 +12,7 @@ describe('disarm()', () => {
     expect(disarm(5)).toBeInstanceOf(Promise);
     expect(disarm('foo')).toBeInstanceOf(Promise);
     expect(disarm(new Promise((resolve) => resolve(null))))
-      .toBeInstanceOf(Promise);
+        .toBeInstanceOf(Promise);
   });
 
   it('returned promises should always resolve', () => {
@@ -31,7 +31,7 @@ describe('disarmAll()', () => {
   it('returned promise should resolve to an array', () => {
     expect(disarmAll([])).resolves.toEqual([]);
     expect(disarmAll([resolvingPromise, rejectingPromise]))
-    .resolves.toEqual([null, error]);
+        .resolves.toEqual([null, error]);
   });
 
   it('should throw error if argument is not an array', () => {
